@@ -1,6 +1,105 @@
----
-theme :
-  name : twitter
----
-{% include JB/setup %}
-{% include themes/twitter/default.html %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ site.name }}: {{ page.title }}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+              integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+              crossorigin="anonymous">
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ site.base }}/css/group.css">
+    </head>
+    <body>
+        <div class="container">
+            <!-- This is a bit nasty, but it basically says be a column first, and on larger screens be a spaced out row -->
+            <div class="header d-flex
+                        flex-column
+                        flex-md-row justify-content-md-between">		
+                <a href="{{ site.base }}/" class="">
+		<!--
+                  <div>
+                    <img src="{{ site.base }}/img/arrow_run_small.png"
+                         srcset="{{ site.base }}/img/arrow_run_small.png 2x"
+                         alt="Awesome" id="logo" style="float:left">
+                    <p align="left" style="width:600px">
+                         <font size="+4" color="#bf5700"><b>SLAM Lab</b></font>
+                         <br>
+                         <font color="#333f48">System-Level Architecture and Modeling Research Group</font>
+                    </p>
+                  </div>
+		-->
+                  <table>
+                    <tr>
+                      <td>
+                        <img src="{{ site.base }}/img/arrow_run_small.png"
+                             srcset="{{ site.base }}/img/arrow_run_small.png 2x"
+                             alt="SLAM_logo" id="logo" style="margin-top:7.5%;margin-right:10%;">
+                      </td>
+                      <td valign="top" align="left">
+                        <font size="+4" color="#bf5700"><b>SLAM Lab</b></font>
+			<br>
+                        <font color="#333f48">System-Level Architecture and Modeling Research Group</font>
+                      </td>
+                    </tr>
+                  </table>
+                </a>
+                <ul class="nav nav-pills justify-content-center">
+
+                    {% assign shorturl = page.url | replace:'.html','' | replace:'index','' %}
+                    {% for item in site.navigation %}
+
+                        {% assign itemshorturl = item.link | replace:'.html','' %}
+
+                        {% assign maybe-active = '' %}
+                        {% if item.title == 'Research' and page.layout == 'project' %}
+                            {% assign maybe-active = 'active' %}
+                        {% endif %}
+                        {% if itemshorturl == shorturl or is-research %}
+                            {% assign maybe-active = 'active' %}
+                        {% endif %}
+
+                        <li class="nav-item">
+                            <a class="nav-link {{ maybe-active }}"
+                               href="{{ site.base }}{{ item.link }}">
+                                {{ item.title }}
+                            </a>
+                        </li>
+
+                    {% endfor %}
+
+                </ul>
+            </div>
+
+            {% if page.image %}
+                <img src="{{ page.image }}"
+                     alt="{{ page.title }}"
+                     style="max-width: 400px"
+                     class="img-fluid mx-auto d-block mb-4"/>
+            {% endif %}
+
+            {% if page.notitle != true %}
+                <h1>{{ page.title }}</h1>
+            {% endif %}
+
+            {{ content }}
+
+            <div class="footer">
+                <p>
+                    <a href="https://www.ece.utexas.edu/">Department of Electrical and Computer Engineering</a>
+                    at
+                    <a href="https://www.utexas.edu/">The University of Texas at Austin</a>
+                    <br>
+                    Based on the web site template by <a href="https://github.com/uwsampa/research-group-web">uwsampa</a>
+                </p>
+            </div>
+
+        </div> <!-- /container -->
+
+        <!-- Support retina images. -->
+        <script type="text/javascript"
+                src="{{ site.base }}/js/srcset-polyfill.js"></script>
+    </body>
+</html>

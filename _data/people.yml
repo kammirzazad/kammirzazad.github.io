@@ -1,0 +1,148 @@
+
+prof-a:
+    display_name: "Andreas Gerstlauer"
+    role: faculty
+    webpage: "http://users.ece.utexas.edu/~gerstl/"
+    image: /img/people/andreas.jpg
+    bio: Associate Professor
+
+grad-a:
+    display_name: "Zhuoran Zhao"
+    role: grad
+    webpage: "https://zoranzhao.github.io/"
+    image: /img/people/zhuoran.jpg
+    bio: Ph.D. Candidate
+
+grad-b:
+    display_name: "Mochamad Asri"
+    role: grad
+    image: /img/people/mocha.jpg
+    bio: Ph.D. Candidate
+
+grad-c:
+    display_name: "Kishore Punniyamurthy"
+    role: grad
+    webpage: "https://www.linkedin.com/in/kishore-punniyamurthy-2b74247a/"
+    image: /img/people/kishore.jpg
+    bio: Ph.D. Student
+
+grad-d:
+    display_name: "Kamyar Mirzazad Barijough"
+    role: grad
+    webpage: "https://about.me/kammirzazad"
+    image: /img/people/kamyar.jpg
+    bio: Ph.D. Student
+
+grad-e:
+    display_name: "Alexander Cathis"
+    role: grad
+    webpage: "https://www.linkedin.com/in/alexander-cathis-5592a6ab/"
+    image: /img/people/alex.jpg
+    bio: M.S./Ph.D. Student
+
+grad-f:
+    display_name: "Susana Alcorta Lozano"
+    role: grad
+    webpage: "https://www.linkedin.com/in/erika-susana-alcorta/"
+    image: /img/people/susy.jpg
+    bio: M.S./Ph.D. Student
+
+alum-phd-a:
+    display_name: "Wooseok Lee"
+    role: alum-phd
+    bio: "2019, Samsung Architecture Research Center (SARC), Austin, TX"
+    webpage: "https://www.linkedin.com/in/wooseok-lee-02169549/"
+    image: /img/people/wooseok.jpg
+
+alum-phd-b:
+    display_name: "Seogoo Lee"
+    role: alum-phd
+    bio: "2017, Cadence, Pittsburgh, PA"
+
+alum-phd-c:
+    display_name: "Xinnian Zheng"
+    role: alum-phd
+    bio: "2017, co-supervised with Prof. John, NVIDIA, Austin, TX"
+
+alum-phd-d:
+    display_name: "Dongwook Lee"
+    role: alum-phd
+    bio: "2017, Microsoft, Redmond, WA"
+
+alum-phd-e:
+    display_name: "Jin Miao"
+    role: alum-phd
+    bio: "2014, co-supervised with Prof. Orshansky, Cadence, San Jose, CA"
+
+alum-phd-f:
+    display_name: "Parisa Razaghi"
+    role: alum-phd
+    bio: "2014, Cadence, San Jose, CA"
+
+alum-phd-g:
+    display_name: "Dylan Pfeifer"
+    role: alum-phd
+    bio: "2014, co-supervised with Prof. Valvano, Intel, Austin, TX"
+
+alum-phd-h:
+    display_name: "Ardavan Pedram"
+    role: alum-phd
+    bio: "2013, co-supervised with Prof. van de Geijn), post-doc at Stanford"
+    webpage: "https://web.stanford.edu/~perdavan/"
+
+alum-phd-i:
+    display_name: "Ku He"
+    role: alum-phd
+    bio: "2012, co-supervised with Prof. Orshansky, Cirrus Logic, Austin, TX"
+
+alum-phd-j:
+    display_name: "Ahmed Abdel Hadi"
+    role: alum-phd
+    bio: "2011, co-supervised with Prof. Vishwanath, post-doc at Virginia Tech"
+    webpage: "http://www.ece.vt.edu/aabdelhadi/"
+
+alum-master-a:
+    display_name: "Malek Srour"
+    role: alum-master
+    bio: "2018, Apple, Cupertino, CA"
+
+alum-master-b:
+   display_name: "Abhishek Das"
+   role: alum-master
+   bio: "2016, Ph.D. at UT Austin"
+
+alum-master-c:
+   display_name: "Sabine Francis"
+   role: alum-master
+   bio: "2015, Intel, Austin, TX"
+
+alum-master-d:
+   display_name: "Wenxiao Yu"
+   role: alum-master
+   bio: "2015, Salesforce, San Francisco, CA"
+
+alum-master-e:
+   display_name: "Ashmita Sinha"
+   role: alum-master
+   bio: "2012, Intel, Austin, TX"
+
+alum-master-f:
+   display_name: "Manan Kathuria"
+   role: alum-master
+   bio: "2012, Intel Mobile Communications, NJ"
+
+alum-master-g:
+   display_name: "Suhas Chakravarty"
+   role: alum-master
+   bio: "2012, Freescale, India"
+
+alum-master-h:
+   display_name: "Arindam Goswami"
+   role: alum-master
+   bio: "2011, National Instruments, Austin, TX"
+
+alum-master-i:
+   display_name: "Pablo Salinas Bomfim"
+   role: alum-master
+   bio: "2010, Digital Development S.A., Paraguay"
+

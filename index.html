@@ -1,0 +1,73 @@
+---
+layout: default
+title: Home
+notitle: true
+
+# groups of columns of {roles: list, width: num, image: bool}
+role-tables:
+- - roles: [faculty, postdoc, staff]
+    width: 4
+    image: true
+  - roles: [grad]
+    width: 8
+    image: true
+- - roles: [alum-phd]
+    width: 7
+    image: false
+  - roles: [alum-master]
+    width: 5
+    image: false
+---
+
+<div class="jumbotron">
+    <p>
+At its core, research in <b>System-Level Architecture and Modeling (SLAM)</b> has traditionally been concerned with electronic system-level design (ESL/SLD) of embedded computer systems, where a specific focus has been on system-level design automation methodologies, technologies and tools. Many results continue to flow into the development of the System-on-Chip Design Enviroment (SCE), which realizes an automated design flow for synthesis of high-level system specifications down to highly heterogeneous multi-processor and multi-core systems-on-chip (MPCSoCs) spanning across hardware and software boundaries. A commercial derivate of SCE, called called SER (Specify-Explore-Refine), has been developed and deployed for use in suppliers of space-electronic components for the Japanese Aerospace Exploration Agency (JAXA). Both SCE and SER are based on the SpecC system-level design language (SLDL), which has been cited as major reference for the development of SystemC, the leading, industry-standard SLDL today. We use both languages in our group.
+    </p>
+</div>
+
+<section>
+    <h2>Announcements</h2>
+    <ul class="news list-unstyled">
+        {% for post in site.posts limit: site.front_page_news %}
+            {% include news-item.html item=post %}
+        {% endfor %}
+    </ul>
+    {% assign numposts = site.posts | size %}
+    {% if numposts >= 1 %}
+        <p>
+            <span class="fa fa-fw fa-history"></span>
+            <a href="{{ site.base }}/blog.html">Older posts&hellip;</a>
+        </p>
+    {% endif %}
+</section>
+
+<section>
+    <h2>Active Research Projects</h2>
+    <div class="card-columns">
+        {% comment %}
+        Sort the projects by date, putting those without dates last
+        {% endcomment %}
+        {% assign projects_by_date = site.projects | sort: 'last-updated', 'first' %}
+        {% assign projects_by_date = projects_by_date | reverse %}
+        {% for p in projects_by_date %}
+            {% if p.status != "inactive" %}
+                {% include project-card.html project=p %}
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+<div id="people">
+    <h2>People</h2>
+    {% for role-table in page.role-tables %}
+        <section class="people row justify-content-between">
+            {% for role-column in role-table %}
+                <div class="col-md-{{ role-column.width }}">
+                    {% for role in role-column.roles %}
+                        {% include role-people.html role=role image=role-column.image %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </section>
+    {% endfor %}
+</div>
